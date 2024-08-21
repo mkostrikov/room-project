@@ -1,0 +1,21 @@
+:root {
+    --font: 'League Spartan';
+  }
+  
+  body {
+    font-family: var(--font), sans-serif;
+  }
+  
+  body:has([popover]:popover-open) {
+    overflow: hidden;
+  }
+  
+  img {
+    max-inline-size: 100%;
+    vertical-align: bottom;
+  }
+  
+  a,
+  button {
+    cursor: pointer;
+  }
