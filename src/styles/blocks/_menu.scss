@@ -1,0 +1,42 @@
+.b-menu {
+    & {
+      inline-size: 100%;
+    }
+  
+    &::backdrop {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  
+    &__content {
+      inline-size: 100%;
+      padding: 0 24px;
+      display: grid;
+      grid-template-rows: 110px;
+      grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+      align-items: center;
+      animation: menu-open 0.5s ease-in-out;
+    }
+  
+    &__btn {
+      block-size: 16px;
+      inline-size: 16px;
+      background-color: transparent;
+    }
+  
+    &__btn svg {
+      block-size: inherit;
+      inline-size: inherit;
+      fill: rgba(0, 0, 0, 0.2);
+    }
+  
+    @keyframes menu-open {
+      0% {
+          grid-template-rows: 0px;
+      }
+  
+      100% {
+          grid-template-rows: 110px;
+      }
+    }
+  }  

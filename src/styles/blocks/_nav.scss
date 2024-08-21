@@ -1,0 +1,42 @@
+@use "../tools" as t;
+
+.b-nav {
+  color: #000;
+
+  &--white {
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.04em;
+    color: currentColor;
+    position: relative;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    padding-block-start: 2px;
+    inline-size: 100%;
+    background: linear-gradient(to bottom, currentColor, currentColor) no-repeat;
+    background-position: center bottom;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+  }
+
+  @media (hover: hover) {
+    a:hover::after {
+      background-size: 100% 2px;
+    }
+  }
+}
+
