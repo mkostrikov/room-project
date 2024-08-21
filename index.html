@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Room homepage</title>
@@ -13,6 +13,112 @@
     <script defer type="module" src="/src/scripts/main.js"></script>
   </head>
   <body>
-    
+    <div class="b-gallery">
+      <ul class="b-gallery__list" id="gallery">
+        <li class="b-gallery__item">
+          <picture class="b-gallery__picture">
+            <img
+              src="/src/assets/images/desktop-image-hero-3.webp"
+              alt="A black chair sits in the center of a dimly lit room."
+              width="840"
+              height="534"
+            />
+          </picture>
+
+          <div class="b-gallery__content">
+            <h2 class="b-gallery__headline">
+              Manufactured with the best materials
+            </h2>
+            <p class="b-gallery__description">
+              Our modern furniture store provide a high level of quality. Our
+              company has invested in advanced technology to ensure that every
+              product is made as perfect and as consistent as possible. With
+              three decades of experience in this industry, we understand what
+              customers want for their home and office.
+            </p>
+            <a href="#" class="b-gallery__link">
+              <span>shop now</span>
+              <svg viewBox="0 0 40 12" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+
+        <li class="b-gallery__item">
+          <picture class="b-gallery__picture">
+            <img
+              src="/src/assets/images/desktop-image-hero-2.webp"
+              alt="There are three colorful chairs in a bright room."
+              width="840"
+              height="534"
+            />
+          </picture>
+
+          <div class="b-gallery__content">
+            <h2 class="b-gallery__headline">
+              We are available all across the globe
+            </h2>
+            <p class="b-gallery__description">
+              With stores all over the world, it's easy for you to find
+              furniture for your home or place of business. Locally, we’re in
+              most major cities throughout the country. Find the branch nearest
+              you using our store locator. Any questions? Don't hesitate to
+              contact us today.
+            </p>
+            <a href="#" class="b-gallery__link">
+              <span>shop now</span>
+              <svg viewBox="0 0 40 12" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+
+        <li class="b-gallery__item">
+          <picture class="b-gallery__picture">
+            <img
+              src="/src/assets/images/desktop-image-hero-1.webp"
+              alt="A room featuring a table in the center, with a plant placed on it and two chairs positioned next to it."
+              width="840"
+              height="534"
+            />
+          </picture>
+
+          <div class="b-gallery__content">
+            <h2 class="b-gallery__headline">
+              Discover innovative ways to decorate
+            </h2>
+            <p class="b-gallery__description">
+              We provide unmatched quality, comfort, and style for property
+              owners across the country. Our experts combine form and function
+              in bringing your vision to life. Create a room in your own style
+              with our collection and make your property a reflection of you and
+              what you love.
+            </p>
+            <a href="#" class="b-gallery__link">
+              <span>shop now</span>
+              <svg viewBox="0 0 40 12" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill-rule="nonzero"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="b-gallery__controls" id="gallery-controls">
+        <button
+          class="b-gallery__control b-gallery__control--prev"
+          id="prev"
+          aria-label="previous image"
+        ></button>
+
+        <button
+          class="b-gallery__control b-gallery__control--next"
+          id="next"
+          aria-label="next image"
+        ></button>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,136 @@
+@use "../tools" as t;
+
+.b-gallery {
+  --btn-size: 56px;
+  --bg-color: #000;
+
+  max-inline-size: 1440px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 360px 420px;
+
+  &__list {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: grid;
+    grid: subgrid / subgrid;
+    overflow: hidden;
+  }
+
+  &__item {
+    grid-column: inherit;
+    grid-row: inherit;
+    display: grid;
+    grid: subgrid / subgrid;
+    justify-items: center;
+  }
+
+  &__picture img {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    background-color: #fff;
+    max-inline-size: 420px;
+    padding: 60px 24px;
+    display: grid;
+    align-content: space-between;
+  }
+
+  &__link {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    place-items: center start;
+    gap: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.07;
+    letter-spacing: 0.83em;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  &__link svg {
+    block-size: 12px;
+    inline-size: 40px;
+    fill: currentColor;
+  }
+
+  &__controls {
+    z-index: 2;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    justify-self: end;
+    display: flex;
+    flex: 0;
+  }
+
+  &__control {
+    block-size: var(--btn-size);
+    inline-size: var(--btn-size);
+    background-color: var(--bg-color);
+    color: var(--bg-color);
+  }
+
+  &__control--prev,
+  &__control--next {
+    background-repeat: no-repeat;
+    background-size: 10px 18px;
+    background-position: center;
+  }
+
+  &__control--prev {
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="%23FFF" fill="none" fill-rule="evenodd" /></svg>');
+  }
+
+  &__control--next {
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="%23FFF" fill="none" fill-rule="evenodd" /></svg>');
+  }
+
+  @media (hover: hover) {
+    &__control:hover {
+      --bg-color: #444;
+    }
+
+    &__link:hover {
+      color: #a0a0a0;
+    }
+  }
+
+  @media (hover: none) {
+    &__control:active {
+      --bg-color: #444;
+    }
+
+    &__link:active {
+      color: #a0a0a0;
+    }
+  }
+
+  @include t.breakpoint(xs) {
+    & {
+      grid-template-rows: 500px 420px;
+    }
+  }
+
+  @include t.breakpoint(s) {
+    & {
+      grid-template-rows: 534px;
+      grid-template-columns: 58% 42%;
+    }
+
+    &__content {
+      padding: 100px 24px;
+    }
+
+    &__controls {
+      grid-column: 2;
+      justify-self: start;
+    }
+  }
+}
