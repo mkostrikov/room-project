@@ -1,6 +1,8 @@
 @use "../tools" as t;
 
 .l-header {
+  max-inline-size: 1440px;
+  margin-inline: auto;
   display: grid;
   grid-template-areas: "h";
   align-items: start;

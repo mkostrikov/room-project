@@ -1,5 +1,15 @@
 @use "../tools" as t;
 
+h1 {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 h2 {
   font-size: clamp(
     t.rem(40),
@@ -29,5 +39,5 @@ p {
   font-size: 16px;
   line-height: 1.37;
   letter-spacing: -0.02em;
-  color: #a0a0a0;
+  color: #565656;
 }
