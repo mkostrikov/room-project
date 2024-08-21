@@ -1,0 +1,35 @@
+@use "../tools" as t;
+
+.l-main {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+
+  &__img {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    background-color: #fff;
+    max-inline-size: 420px;
+    padding-inline: 24px;
+    display: grid;
+    align-content: center;
+    gap: 16px;
+  }
+
+  @include t.breakpoint(m) {
+    & {
+      grid-template-columns: 35% 30% 35%;
+      gap: 0;
+    }
+
+    &__content {
+      padding-block: 60px;
+      gap: 32px;
+    }
+  }
+}

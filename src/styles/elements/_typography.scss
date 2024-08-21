@@ -11,6 +11,19 @@ h2 {
   color: #000;
 }
 
+h3 {
+  font-size: clamp(
+    t.rem(14),
+    0.8309859154929577rem + 0.18779342723004694vw,
+    t.rem(16)
+  );
+  font-weight: 700;
+  line-height: 1.57;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: #000;
+}
+
 p {
   font-weight: 500;
   font-size: 16px;
